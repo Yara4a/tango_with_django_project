@@ -5,6 +5,15 @@
 </head>
 <body>
     <h1>Rango says hey!</h1>
+    {% if categories %}
+        <ul>
+        {% for category in categories %}
+            <li>{{ category.name }}</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>There are no categories present.</p>
+    {% endif %}
     <p>This is a simple Django application.</p>
 </body>
 </html>
